@@ -1,4 +1,4 @@
-### 分散型検証(Decentralized verification)の為のアプリケーション開発
+## 分散型検証(Decentralized verification)の為のアプリケーション開発
 
 <br>
 <br>
