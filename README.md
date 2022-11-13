@@ -91,6 +91,9 @@
 
 ---
 
+<br>
+<br>
+
 ### アイデアの流れ
 
 1. 参加者が DAO に DID を登録する(function registerDao)
@@ -112,14 +115,39 @@
 17. mint コントラクトがトピック、検証内容、レビューなどを ERC721 で mint する(function mintNft)
 18. 仕様として１ヶ月あたりに検証するスレッドの数を制限する（例：最大月 1 万件までスレッドを作るとして、その中で一件当たりに配布する ERC20 token を１０とする。発行上限を 5000 万として 1 万 ×10×12×41 なので約４１年稼働出来る。発行数量に半減期を設けるなどして更に調整を考える。(contract ThreadSetting)
 19. ERC721 に二次流通によるロイヤリティを付与するかも検討する。
+    <br>
+    <br>
+    <br>
+
+## DID の概念や扱いについて
+
+<br>
+一般的にIDとパスワードはログインの際に使う。しかしこのシステムの場合はwallet connect をした後に内部のメンバーがそれぞれ所持しているNFTを公開してパーソナリティの確認を行う。
+<br>
+<br>
+ロジックはwallet connectをしてから所持しているNFTのメタデータを表示出来るようにする。（実装方法は後で勉強）
 
 ---
 
+<br>
+<br>
+
 ### 1. 参加者が DAO に DID を登録する
 
-#### function signUp
+### function registerDao()
 
-DAO に参加するための会員登録
+<br>
+（例）DAO に参加するための会員登録
+<br>
+<br>
+試案
+<br>
+buttonClick createDid() -> TabInput(username,walletAddress,age,mailAddress,profile,image) -> buttonClick mintDidNft() -> openWindow showRules() -> buttonClick  verifyRules() -> openWindow didMintFinish(DIDのmintが完了しました)
+<br>
+（例）終わり　尚ログイン回りに必要なデータベースの構築をするか否かは後で考える。
+<br>
+<br>
+<br>
 
 - argument: bytes32 DID, bytes32 password, (address msg.sender)
 - operation
@@ -149,6 +177,9 @@ Note right of p: event sign-up completed
 ```
 
 ---
+
+<br>
+<br>
 
 ### 2. DAO 参加者が DID によって DAO に入る
 
