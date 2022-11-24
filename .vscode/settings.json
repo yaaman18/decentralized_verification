@@ -20,11 +20,17 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.words": [
+    "arbitrum",
+    "browserslist",
     "classname",
+    "compat",
+    "corejs",
     "daisyui",
     "ethersproject",
     "nomiclabs",
+    "rainbowkit",
     "tailwindcss",
-    "typechain"
+    "typechain",
+    "wagmi"
   ]
 }
